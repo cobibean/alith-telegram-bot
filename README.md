@@ -12,8 +12,8 @@ A Telegram bot for interacting with the Alith AI system.
 
 1. Clone this repository
 ```bash
-git clone https://github.com/protonBEAN/alithTGBot.git
-cd alithTGBot
+git clone https://github.com/cobibean/alith-telegram-bot.git
+cd alith-telegram-bot
 ```
 
 2. Install dependencies
