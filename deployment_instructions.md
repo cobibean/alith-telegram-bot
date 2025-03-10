@@ -12,27 +12,37 @@ ssh root@YOUR_DROPLET_IP
 
 ## 2. Update System Packages
 
+Use the apt package manager (Ubuntu/Debian system package manager) to update your system:
+
 ```bash
 apt update && apt upgrade -y
 ```
 
-## 3. Install Required Software
+## 3. Install Required System Software
 
-Install Node.js, Git, and PM2:
+Use apt to install system requirements:
 
 ```bash
-# Install Node.js
+# Install Node.js repository
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+
+# Install Node.js and npm using apt (system package manager)
 apt-get install -y nodejs
 
-# Install Git
+# Install Git using apt
 apt install git -y
+```
 
-# Install PM2 (process manager)
+## 4. Install PM2 (Process Manager) using npm
+
+Now that Node.js and npm are installed, use npm to install the PM2 process manager:
+
+```bash
+# Install PM2 globally using npm (Node.js package manager)
 npm install -g pm2
 ```
 
-## 4. Clone the Repository
+## 5. Clone the Repository
 
 ```bash
 # Clone the repository
@@ -40,13 +50,16 @@ git clone https://github.com/cobibean/alith-telegram-bot.git
 cd alith-telegram-bot
 ```
 
-## 5. Install Dependencies
+## 6. Install Node.js Dependencies
+
+Use npm to install the project dependencies defined in package.json:
 
 ```bash
+# Install project dependencies using npm
 npm install
 ```
 
-## 6. Create Environment File
+## 7. Create Environment File
 
 Create a `.env` file with your configuration:
 
@@ -64,10 +77,10 @@ OPENAI_API_KEY=your_openai_api_key
 
 Save and exit: `CTRL+X`, then `Y`, then `Enter`
 
-## 7. Start the Bot with PM2
+## 8. Start the Bot with PM2
 
 ```bash
-# Start the bot
+# Start the bot with PM2
 pm2 start index.js --name "alith-telegram-bot"
 
 # Save the PM2 process list
@@ -79,7 +92,7 @@ pm2 startup
 
 Follow the instructions output by the last command to make PM2 start automatically on system boot.
 
-## 8. Monitor Your Bot
+## 9. Monitor Your Bot
 
 ```bash
 # Check status
@@ -89,7 +102,9 @@ pm2 status
 pm2 logs alith-telegram-bot
 ```
 
-## 9. Set Up a Firewall (Optional but Recommended)
+## 10. Set Up a Firewall (Optional but Recommended)
+
+Use Ubuntu's uncomplicated firewall (ufw) to secure your server:
 
 ```bash
 # Allow SSH, HTTP, and HTTPS
