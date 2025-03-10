@@ -7,7 +7,7 @@ Follow these steps to deploy the Alith Telegram Bot on your Digital Ocean drople
 After creating your droplet with SSH keys, connect to it:
 
 ```bash
-ssh root@YOUR_DROPLET_IP
+ssh root@146.190.63.86
 ```
 
 ## 2. Update System Packages

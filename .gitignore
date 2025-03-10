@@ -49,4 +49,7 @@ coverage
 .env
 
 # Log files
-llm_logs/ 
+llm_logs/
+
+# Password reference file - DO NOT COMMIT
+droplet_access.md 
