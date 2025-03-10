@@ -1,0 +1,20 @@
+{
+  "name": "alithtgbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "alith": "file:../sdks/node",
+    "axios": "^1.8.1",
+    "cargo": "^0.8.0",
+    "dotenv": "^16.4.7",
+    "telegraf": "^4.16.3"
+  }
+}
