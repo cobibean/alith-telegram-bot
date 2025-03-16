@@ -13,6 +13,25 @@ A sophisticated AI-powered Telegram bot that integrates the Alith AI system with
 
 ## 🚀 Quick Start
 
+### Repository Setup
+
+1. **Fork Required Repositories**
+   - First, fork the main [Alith repository](https://github.com/cobibean/alith)
+   - Then, fork this [Vic repository](https://github.com/cobibean/alith-telegram-bot)
+   - The Vic repository should be placed in the root directory of the Alith repository for proper dependency resolution
+
+2. **Clone Both Repositories**
+   ```bash
+   # Clone main Alith repository
+   git clone https://github.com/YOUR_USERNAME/alith.git
+   cd alith
+   
+   # Clone Vic repository inside the Alith repository root
+   git clone https://github.com/YOUR_USERNAME/alith-telegram-bot.git VIC
+   ```
+
+### Setup and Installation
+
 1. **Prerequisites**
    ```bash
    # Install Node.js 18.x
@@ -27,26 +46,27 @@ A sophisticated AI-powered Telegram bot that integrates the Alith AI system with
    sudo apt install -y build-essential
    ```
 
-2. **Installation**
+2. **Build the Alith SDK**
    ```bash
-   # Clone repositories
-   git clone https://github.com/cobibean/alith.git
-   git clone https://github.com/cobibean/alith-telegram-bot.git
-
-   # Build Alith SDK
+   # Navigate to Alith root directory (if not already there)
    cd alith
+   
+   # Build Alith SDK
    cargo build --release
    cd sdks/node
    npm install
    npm run build
-   cd ../../..
+   cd ../../
+   ```
 
-   # Setup Vic
-   cd alith-telegram-bot
+3. **Setup Vic**
+   ```bash
+   # Navigate to Vic directory
+   cd VIC
    npm install
    ```
 
-3. **Configuration**
+4. **Configuration**
    ```bash
    # Create and edit .env file
    cp .env.example .env
@@ -57,7 +77,7 @@ A sophisticated AI-powered Telegram bot that integrates the Alith AI system with
    # OPENAI_API_KEY=your_openai_api_key
    ```
 
-4. **Running**
+5. **Running**
    ```bash
    # Development
    npm run dev
